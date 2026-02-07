@@ -1,0 +1,131 @@
+ScribeCount Intelligence Platform – Complete
+Developer Flow & API Guide
+1. Platform Vision
+ScribeCount is an end-to-end intelligence platform connecting marketing actions, reader
+behavior, sales outcomes, and attribution into a single explainable system.
+2. Core System Flow
+Author Actions → ScribeCount Links → Website Traffic → Sales Data → Attribution
+Engine → Unified Reporting → Hey ScribeCount Intelligence
+3. Core Services
+3.1 ScribeCount Linking (Intent Layer)
+1
+Create canonical marketing links
+2
+Route traffic intelligently
+3
+Capture immutable click events
+4
+Attach campaign and context metadata
+5
+Feed attribution engine
+3.2 Website Traffic (Behavior Layer)
+1
+First-party event tracking
+2
+Page views and engagement
+3
+Funnel and conversion tracking
+4
+Heatmap aggregation
+5
+Daily behavioral snapshots
+3.3 Sales & Revenue Layer
+1
+Retail sales ingestion
+2
+Direct sales ingestion
+3
+Refund and adjustment handling
+4
+Profit normalization
+3.4 Attribution Engine
+1
+Deterministic attribution for direct sales
+2
+Probabilistic models for retailers
+3
+Confidence scoring
+4
+Incrementality evaluation
+5
+Versioned output records
+3.5 ScribeCount Email
+1
+Campaign sending
+2
+Automation flows
+3
+Audience segmentation
+4
+Deliverability monitoring
+5
+Signal event generation
+3.6 Hey ScribeCount Intelligence
+1
+Natural language query processing
+2
+Analytics API consumption
+3
+Explanation generation
+4
+Report creation
+5
+Follow-up actions
+4. Suggested API Responsibilities
+Service
+Core APIs
+Linking
+Create Link, Resolve Link, Click Event Ingest
+Website Traffic
+Track Event, Fetch Funnels, Heatmap Data
+Sales
+Ingest Sales, Refunds, Costs
+Attribution
+Run Models, Fetch Attribution Results
+Email
+Send Campaign, Trigger Flow, Fetch Engagement
+Reporting
+Unified Metrics API
+Hey ScribeCount
+Query Interpreter, Report Generator
+5. Correct Build Order
+1
+Phase 0 – Event contracts and schemas
+2
+Phase 1 – Linking foundation
+3
+Phase 2 – Website behavior tracking
+4
+Phase 3 – Sales normalization
+5
+Phase 4 – Attribution engine
+6
+Phase 5 – Email marketing system
+7
+Phase 6 – Unified reporting
+8
+Phase 7 – Hey ScribeCount interface
+6. Example End-to-End Flow
+1. Author sends email campaign with ScribeCount links.
+2. User clicks link → Linking records intent.
+3. User visits website → Website Traffic records behavior.
+4. User purchases → Sales system records transaction.
+5. Attribution engine evaluates causality.
+6. Reporting merges all signals.
+7. Hey ScribeCount explains results.
+7. Engineering Principles
+1
+First-party data only
+2
+Event-driven architecture
+3
+Immutable source data
+4
+Additive attribution overlays
+5
+Explainable analytics
+6
+Loose service coupling
+8. Final Notes
+This system is a signal pipeline: intent captured first, behavior observed next, outcomes
+reconciled later, and intelligence layered on top.
