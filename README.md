@@ -168,6 +168,6 @@ This project is **private** and proprietary. All rights reserved.
 
 <div align="center">
 
-**Built with ❤️ for Authors**
+**Built by Azghan Ahmad for ScribeCount Authors**
 
 </div>
