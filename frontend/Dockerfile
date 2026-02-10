@@ -1,26 +1,32 @@
-# Stage 1: Build the Angular application
-FROM node:22-alpine AS build
+## Multi-stage Dockerfile for ScribeCount Angular frontend
+
+# 1) Build stage - compile Angular app
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
-# Copy package files and install dependencies
+# Install dependencies
 COPY package.json package-lock.json ./
 RUN npm ci
 
-# Copy source code and build for production
+# Copy source and build
 COPY . .
 RUN npm run build
 
-# Stage 2: Serve with Nginx
-FROM nginx:alpine
 
-# Copy custom Nginx configuration
+# 2) Runtime stage - serve built app with nginx
+FROM nginx:1.27-alpine AS runtime
+
+# Remove default nginx site config
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Copy custom nginx config for SPA routing
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy built Angular app from build stage
-COPY --from=build /app/dist/scribecount/browser /usr/share/nginx/html
+# Copy built Angular app
+COPY --from=build /app/dist/scribecount /usr/share/nginx/html
 
-# Expose port 80
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
+
