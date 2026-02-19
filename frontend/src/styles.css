@@ -1,0 +1,370 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ───── Theme Variables ───── */
+:root {
+  /* Core palette (matching previous app) */
+  --primary: rgb(28, 46, 74);
+  --primary-dark: rgb(18, 30, 48);
+  --primary-light: rgba(59, 130, 246, 0.08);
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-teal: #14b8a6;
+
+  /* Backgrounds */
+  --background: #f8fafc;
+  --background-subtle: #f1f5f9;
+  --surface: #ffffff;
+
+  /* Text */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #94a3b8;
+
+  /* Borders */
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
+
+  /* Status */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --trend-up: #10b981;
+  --trend-down: #ef4444;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, rgb(28, 46, 74) 0%, rgb(45, 75, 120) 100%);
+  --gradient-accent: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  --gradient-sidebar: linear-gradient(180deg, rgb(28, 46, 74) 0%, rgb(18, 30, 48) 100%);
+}
+
+/* ───── Global Reset ───── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ───── Card System ───── */
+.card-static {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card-static:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* ───── Form Elements ───── */
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  background: var(--surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ───── Select / Dropdown Styling ───── */
+select.form-input {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
+  background-size: 16px;
+  padding-right: 2.5rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+select.form-input:hover {
+  border-color: var(--accent-blue);
+  background-color: var(--background);
+}
+
+select.form-input option {
+  padding: 0.5rem;
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+/* ───── Toggle Switch ───── */
+.toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 44px;
+  height: 24px;
+  background: #cbd5e1;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  flex-shrink: 0;
+  border: none;
+}
+
+.toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.toggle:checked {
+  background: var(--gradient-accent);
+  background: var(--accent-blue);
+}
+
+.toggle:checked::after {
+  transform: translateX(20px);
+}
+
+.toggle:hover {
+  background: #94a3b8;
+}
+
+.toggle:checked:hover {
+  background: #2563eb;
+}
+
+/* ───── Buttons ───── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(28, 46, 74, 0.25);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(28, 46, 74, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background: var(--background);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+}
+
+/* ───── Badges ───── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 100px;
+  text-transform: capitalize;
+}
+
+.badge-active {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+
+.badge-scheduled {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+
+.badge-expired {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+}
+
+/* ───── Status Dots ───── */
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-green {
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+.status-red {
+  background: #ef4444;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+}
+
+.status-yellow {
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
+}
+
+/* ───── Tooltip System ───── */
+.tooltip-trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  cursor: help;
+}
+
+.tooltip-trigger:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.5rem 0.875rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  max-width: 280px;
+  white-space: normal;
+  z-index: 50;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+}
+
+/* ───── Animations ───── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  opacity: 0;
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+/* ───── Scrollbar ───── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* ───── Selection ───── */
+::selection {
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--text-primary);
+}

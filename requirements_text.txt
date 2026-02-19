@@ -1,0 +1,134 @@
+
+https://geniuslink.com/
+
+Readers click → automatically routed to:
+- correct store
+- correct country
+- correct format
+- correct retailer availability
+- correct campaign tracking
+
+Author can update destination anytime — link never changes.
+
+
+
+
+Core Features
+
+1. Smart Short Links
+
+- Custom branded short URLs
+- Permanent link that never changes
+- Editable destination links anytime
+- Bulk link creation
+
+Routing based on:
+- Country
+- Device
+- Availability
+- Priority rules
+
+
+2. Marketplace Auto Detection
+
+Automatically send users to the best store:
+
+Rules engine:
+
+IF country = UK → Amazon UK
+IF country = Canada → Kobo
+IF Kindle Unlimited reader → Amazon
+IF iOS device → Apple Books priority
+
+Author can customize logic.
+
+3. Central Link Update Control
+
+When book links change:
+
+✔ Update once in SC Links
+✔ All marketing links stay valid
+✔ Ads don’t break
+✔ Social media links remain active
+
+
+
+4. Book Format Intelligence
+
+Single link supports multiple formats:
+
+- Ebook
+- Paperback
+- Hardcover
+- Audiobook
+
+Reader sees smart landing page if multiple formats exist.
+
+Optional: Auto-select preferred format.
+5. Geo-Based Retail Availability Detection
+
+If a store isn’t available in a country: Automatically redirect to alternate retailer.
+
+Example: Amazon unavailable → Kobo fallback.
+6. Campaign Tracking & Attribution
+
+Built-in marketing analytics:
+
+Track clicks by:
+
+✔ Platform (Facebook, email, TikTok, blog)
+✔ Campaign name
+✔ Device type
+✔ Country
+✔ Store selected
+✔ Conversion (if integrated)
+
+Auto UTM generation.
+7. Pre-Order → Release Auto Switch
+
+Before release: link → preorder page
+After release date: link auto switches → buy page
+
+No manual update required.
+8. Broken Link Monitoring
+
+Detect if a retailer page stops working.
+
+Alert author instantly.
+9. Link Expiration / Promotions
+
+Temporary redirect:
+
+Holiday sale → special landing page
+Then revert automatically
+------------------------------------------------------------------------------------------------------------------
+
+Q: Why I Use Geniuslink Between Meta Ads and Amazon 
+
+If you're running Facebook/Instagram ads straight to Amazon, there’s a gap in the funnel most people miss:
+
+You lose your pixel audience layer.
+
+Even with Amazon Attribution, Meta doesn’t get much usable 
+signal beyond the outbound click — which makes retargeting and optimization way harder.
+
+My flow looks like this:
+Meta Ad → Geniuslink → Amazon Attribution → Product Page
+
+That Geniuslink layer does a few things:
+Retargeting audiences
+Pixel fires on the bridge page, so you can build “clickers who didn’t convert” audiences and run cheaper follow-ups.
+Cleaner traffic routing
+Instead of sending paid traffic directly into Amazon links, you get a neutral step in between — which can reduce policy friction.
+Automatic localization + deep linking
+International visitors hit their local storefront. Mobile users route cleanly. Less leakage.
+One link, clearer visibility
+Geniuslink + Attribution gives you a more complete view of off-Amazon traffic performance.
+Bottom line: Attribution measures conversions, but it doesn’t give you the retargeting layer Meta needs. Geniuslink closes the loop.
+Smart plumbing makes smart funnels.
+
+
+
+ The primary complaint authors have about linking is that it doesnt follow the click all the way to the sale. Since SC will have their email data, sales data, and website traffic data, I'm hoping our linking feature will provide a more complete ROI picture for them.
+
+The UI for this is will need to be as friendly as possible and with minimal friction.

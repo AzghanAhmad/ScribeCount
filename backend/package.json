@@ -1,0 +1,8 @@
+{
+  "name": "sc-smart-links-backend",
+  "private": true,
+  "scripts": {
+    "start": "dotnet run --project API",
+    "build": "dotnet build SCLinks.sln"
+  }
+}

@@ -1,0 +1,71 @@
+﻿git : warning: in the 
+working copy of 'frontend/pa
+ckage-lock.json', LF will 
+be replaced by CRLF the 
+next time Git touches it
+At line:1 char:1
++ git diff --name-status 
+HEAD 2>&1 | Out-File 
+-Encoding utf8 diff_statu 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo          
+    : NotSpecified: (warni  
+  ng: in the... Git touch   
+ es it:String) [], Remot    
+eException
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+warning: in the working 
+copy of 
+'frontend/package.json', LF 
+will be replaced by CRLF 
+the next time Git touches it
+D	frontend/.dockerignore
+M	frontend/.gitignore
+D	frontend/Dockerfile
+M	frontend/angular.json
+D	frontend/nginx.conf
+M	frontend/package-lock.json
+M	frontend/package.json
+D	frontend/src/_theme.scss
+D	frontend/src/app/assistant/assistant-button.component.ts
+D	frontend/src/app/assistant/assistant-panel.component.ts
+D	frontend/src/app/assistant/assistant.service.ts
+D	frontend/src/app/assistant/conversation-item.component.ts
+D	frontend/src/app/assistant/metadata-panel.component.ts
+D	frontend/src/app/assistant/voice-playback.component.ts
+D	frontend/src/app/core/breadcrumb.service.ts
+D	frontend/src/app/core/sidebar.service.ts
+D	frontend/src/app/header/header.component.ts
+D	frontend/src/app/home/home.component.ts
+D	frontend/src/app/layout/header/header.component.ts
+D	frontend/src/app/layout/layout.component.ts
+D	frontend/src/app/layout/sidebar/sidebar.component.ts
+D	frontend/src/app/pages/alerts/alerts.component.ts
+M	frontend/src/app/pages/analytics/analytics.component.ts
+D	frontend/src/app/pages/api-access/api-access.component.ts
+D	frontend/src/app/pages/attribution/attribution.component.ts
+D	frontend/src/app/pages/audit-logs/audit-logs.component.ts
+M	frontend/src/app/pages/dashboard/dashboard.component.ts
+D	frontend/src/app/pages/email-campaigns/email-campaigns.component.ts
+D	frontend/src/app/pages/forecasting/forecasting.component.ts
+D	frontend/src/app/pages/history/history.component.ts
+D	frontend/src/app/pages/integrations/integrations.component.ts
+D	frontend/src/app/pages/reports/report-viewer.component.ts
+D	frontend/src/app/pages/reports/reports-list.component.ts
+D	frontend/src/app/pages/saved-questions/saved-questions.component.ts
+D	frontend/src/app/pages/scheduled-briefings/scheduled-briefings.component.ts
+M	frontend/src/app/pages/settings/settings.component.ts
+D	frontend/src/app/shared/action-toolbar/action-toolbar.component.ts
+D	frontend/src/app/shared/card/card.component.ts
+D	frontend/src/app/shared/data-table/data-table.component.ts
+D	frontend/src/app/shared/trend-indicator/trend-indicator.component.ts
+D	frontend/src/global_styles.css
+M	frontend/src/index.html
+M	frontend/src/main.ts
+D	frontend/src/styles.scss
+M	frontend/tsconfig.app.json
+M	frontend/tsconfig.json
